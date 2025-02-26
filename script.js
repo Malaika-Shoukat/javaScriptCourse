@@ -553,15 +553,148 @@ let users= {
 
 // objects methods 
 // Object.keys(object ka naam) ------> returns array of keys 
-console.log(Object.keys(users));
- 
-const userObjectKeys= Object.keys(users);
- for(let prop of userObjectKeys){
-    console.log(users[prop])
- }
+//  console.log(Object.keys(users));
+const userobjKeys= Object.keys(users);
+console.log(userobjKeys); 
+let userName= userobjKeys[0];
+console.log(userName);
+let lastName= userobjKeys[1];
+console.log(lastName);
+for(let prop of userobjKeys){
+    console.log(prop);
+}
+//  Object.values(object name) ------>returns array of values of object
+// console.log(Object.values(users));
+const userObjvalues= Object.values(users);
+console.log(userObjvalues);
 
 
+const userProfile={
+    userName: 'pokkee',
+    email:'pokkee58@gmail.com',
+    firstName:'sara',
+    lastName:'latif',
+    age:20,
+    bio:'web developer with a passion for creating userfriendly and functional applications',
+    profilePic:'https://media.istockphoto.com',
+    preferences:{
+        theme:'dark',
+        language:'english',
+        notification:true
+    },
+    friends:[
+        {friend1:'alido56', status:'online'},
+        {friend2:'khanbina', status:'offline'}
+    ],
+    createdAt:'2025-02-6'
+}
+console.log(userProfile);
+console.log(userProfile.bio);
+console.log(userProfile["bio"]);
 
+const userProfileObjectkeys= Object.keys(userProfile);
+ console.log(userProfileObjectkeys);
+ for(let userProfileKeys of userProfileObjectkeys){
+     console.log(userProfileKeys[0].toUpperCase());
+     console.log(userProfileKeys.toLowerCase());
+     console.log("This is the user profile details");
+    }
+ let userEmail= userProfileObjectkeys[1];
+ console.log(userEmail);
+  
+ const userProfileObjectValues= Object.values(userProfile);
+ console.log(userProfileObjectValues);
+
+// COMPUTED PROPERTIES
+let personName= "userName";
+let profileCreatedDate="createdAt";
+let userAge="age"; 
+
+const personData= {
+    [personName]:"pokkee",
+    [profileCreatedDate]:'2025-02-6',
+    [userAge]:'14'
+}
+console.log(personData[personName]);
+console.log(personData[profileCreatedDate]);
+
+// products
+const products=[{
+    productName:'bags',
+    productId:'1',
+    productPrice:1200,
+    quality:30
+},
+{
+    ProductName:'watch',
+    productId:'2',
+    productPrice:3000,
+    quality:20
+},
+{
+    productName:'mobile phone',
+    productId:'3',
+    productPrice:4000,
+    quality:40
+},
+{
+    productName:'charger',
+    productId:'4',
+    productPrice:1000,
+    quality:10
+}
+]
+
+for(let product of products){
+    if(product>1500){
+        console.log(product);
+    }
+}
+console.log(products);
+
+const playerScores=[{
+    plyer1:'ahmed',
+    score:30
+},
+{
+    player2:'khan',
+    score:50
+},
+{
+    player:'saliha',
+    score:60
+}];
+
+for(let playerScore of playerScores)
+{ if(playerScore>50){
+    console.log(playerScore,'Congrats! you won the game.');
+}else{
+console.log(playerScore,'sorry! you loss');
+}
+}
+// ______________________
+// FUNCTIONS----->block{} of that perform a specific task 
+// declare/ define ----then call/invoke 
+// DRY (Do NOT REPEAT YOURSELF)
+// STEP1
+// FUNCTION DEFINITION /FUNCTION DECLARATION 
+
+// function function name(){
+//     code
+// }
+function greet(){
+    console.log("hello programmers")
+}
+greet();
+
+function loginLms(){
+    console.log("welcome to LMS")
+}
+
+registrationNO=4902;
+if(registrationNO===4902){
+    loginLms();
+}
 
 
 
