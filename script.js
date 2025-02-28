@@ -519,20 +519,20 @@
 // values may be primitive or no primitive datatype like(Number,String.array,Object....)
 // const user=["alice","canada",65];
 // console.log(user);
-let users= {
-    fname:"urooj",
-    lname:"shoukat",
-    age:14,
-    pincode:3087,
-    country:"china",
-    is18:true,
-    favBook:["math","chemistry","physics"],
-    adress:{
-    street:"243 main street",
-    city:"karachi",
-    country:"pakistan"
-    }
-}
+// let users= {
+//     fname:"urooj",
+//     lname:"shoukat",
+//     age:14,
+//     pincode:3087,
+//     country:"china",
+//     is18:true,
+//     favBook:["math","chemistry","physics"],
+//     adress:{
+//     street:"243 main street",
+//     city:"karachi",
+//     country:"pakistan"
+//     }
+// }
 // console.log(users);
 //to print any key from an object we use dot notion or bracket notation
 // let userName= users.fname;
@@ -554,124 +554,124 @@ let users= {
 // objects methods 
 // Object.keys(object ka naam) ------> returns array of keys 
 //  console.log(Object.keys(users));
-const userobjKeys= Object.keys(users);
-console.log(userobjKeys); 
-let userName= userobjKeys[0];
-console.log(userName);
-let lastName= userobjKeys[1];
-console.log(lastName);
-for(let prop of userobjKeys){
-    console.log(prop);
-}
+// const userobjKeys= Object.keys(users);
+// console.log(userobjKeys); 
+// let userName= userobjKeys[0];
+// console.log(userName);
+// let lastName= userobjKeys[1];
+// console.log(lastName);
+// for(let prop of userobjKeys){
+//     console.log(prop);
+// }
 //  Object.values(object name) ------>returns array of values of object
 // console.log(Object.values(users));
-const userObjvalues= Object.values(users);
-console.log(userObjvalues);
+// const userObjvalues= Object.values(users);
+// console.log(userObjvalues);
 
 
-const userProfile={
-    userName: 'pokkee',
-    email:'pokkee58@gmail.com',
-    firstName:'sara',
-    lastName:'latif',
-    age:20,
-    bio:'web developer with a passion for creating userfriendly and functional applications',
-    profilePic:'https://media.istockphoto.com',
-    preferences:{
-        theme:'dark',
-        language:'english',
-        notification:true
-    },
-    friends:[
-        {friend1:'alido56', status:'online'},
-        {friend2:'khanbina', status:'offline'}
-    ],
-    createdAt:'2025-02-6'
-}
-console.log(userProfile);
-console.log(userProfile.bio);
-console.log(userProfile["bio"]);
+// const userProfile={
+//     userName: 'pokkee',
+//     email:'pokkee58@gmail.com',
+//     firstName:'sara',
+//     lastName:'latif',
+//     age:20,
+//     bio:'web developer with a passion for creating userfriendly and functional applications',
+//     profilePic:'https://media.istockphoto.com',
+//     preferences:{
+//         theme:'dark',
+//         language:'english',
+//         notification:true
+//     },
+//     friends:[
+//         {friend1:'alido56', status:'online'},
+//         {friend2:'khanbina', status:'offline'}
+//     ],
+//     createdAt:'2025-02-6'
+// }
+// console.log(userProfile);
+// console.log(userProfile.bio);
+// console.log(userProfile["bio"]);
 
-const userProfileObjectkeys= Object.keys(userProfile);
- console.log(userProfileObjectkeys);
- for(let userProfileKeys of userProfileObjectkeys){
-     console.log(userProfileKeys[0].toUpperCase());
-     console.log(userProfileKeys.toLowerCase());
-     console.log("This is the user profile details");
-    }
- let userEmail= userProfileObjectkeys[1];
- console.log(userEmail);
+// const userProfileObjectkeys= Object.keys(userProfile);
+//  console.log(userProfileObjectkeys);
+//  for(let userProfileKeys of userProfileObjectkeys){
+//      console.log(userProfileKeys[0].toUpperCase());
+//      console.log(userProfileKeys.toLowerCase());
+//      console.log("This is the user profile details");
+//     }
+//  let userEmail= userProfileObjectkeys[1];
+//  console.log(userEmail);
   
- const userProfileObjectValues= Object.values(userProfile);
- console.log(userProfileObjectValues);
+//  const userProfileObjectValues= Object.values(userProfile);
+//  console.log(userProfileObjectValues);
 
 // COMPUTED PROPERTIES
-let personName= "userName";
-let profileCreatedDate="createdAt";
-let userAge="age"; 
+// let personName= "userName";
+// let profileCreatedDate="createdAt";
+// let userAge="age"; 
 
-const personData= {
-    [personName]:"pokkee",
-    [profileCreatedDate]:'2025-02-6',
-    [userAge]:'14'
-}
-console.log(personData[personName]);
-console.log(personData[profileCreatedDate]);
+// const personData= {
+//     [personName]:"pokkee",
+//     [profileCreatedDate]:'2025-02-6',
+//     [userAge]:'14'
+// }
+// console.log(personData[personName]);
+// console.log(personData[profileCreatedDate]);
 
 // products
-const products=[{
-    productName:'bags',
-    productId:'1',
-    productPrice:1200,
-    quality:30
-},
-{
-    ProductName:'watch',
-    productId:'2',
-    productPrice:3000,
-    quality:20
-},
-{
-    productName:'mobile phone',
-    productId:'3',
-    productPrice:4000,
-    quality:40
-},
-{
-    productName:'charger',
-    productId:'4',
-    productPrice:1000,
-    quality:10
-}
-]
+// const products=[{
+//     productName:'bags',
+//     productId:'1',
+//     productPrice:1200,
+//     quality:30
+// },
+// {
+//     ProductName:'watch',
+//     productId:'2',
+//     productPrice:3000,
+//     quality:20
+// },
+// {
+//     productName:'mobile phone',
+//     productId:'3',
+//     productPrice:4000,
+//     quality:40
+// },
+// {
+//     productName:'charger',
+//     productId:'4',
+//     productPrice:1000,
+//     quality:10
+// }
+// ]
 
-for(let product of products){
-    if(product>1500){
-        console.log(product);
-    }
-}
-console.log(products);
+// for(let product of products){
+//     if(product>1500){
+//         console.log(product);
+//     }
+// }
+// console.log(products);
 
-const playerScores=[{
-    plyer1:'ahmed',
-    score:30
-},
-{
-    player2:'khan',
-    score:50
-},
-{
-    player:'saliha',
-    score:60
-}];
+// const playerScores=[{
+//     plyer1:'ahmed',
+//     score:30
+// },
+// {
+//     player2:'khan',
+//     score:50
+// },
+// {
+//     player:'saliha',
+//     score:60
+// }];
 
-for(let playerScore of playerScores)
-{ if(playerScore>50){
-    console.log(playerScore,'Congrats! you won the game.');
-}else{
-console.log(playerScore,'sorry! you loss');
-}
-}
+// for(let playerScore of playerScores)
+// { if(playerScore>50){
+//     console.log(playerScore,'Congrats! you won the game.');
+// }else{
+// console.log(playerScore,'sorry! you loss');
+// }
+// }
 // ______________________
 // FUNCTIONS----->block{} of that perform a specific task 
 // declare/ define ----then call/invoke 
@@ -682,23 +682,141 @@ console.log(playerScore,'sorry! you loss');
 // function function name(){
 //     code
 // }
-function greet(){
-    console.log("hello programmers")
+// function greet(){
+//     console.log("hello programmers")
+// }
+// greet();
+
+// function loginLms(){
+//     console.log("welcome to LMS")
+// }
+
+// registrationNO=4902;
+// if(registrationNO===4902){
+//     loginLms();
+// }
+// _______________________________
+// function definition  
+function subNumbers(){
+    console.log(3-4)
 }
-greet();
+// envoke
+subNumbers();
 
-function loginLms(){
-    console.log("welcome to LMS")
+// dynamicWebsits <changes> / staticWebsites <do not change>
+    
+    // inputbox <name enter your name > <email enter your email> <password enter your passwrord >
+    // PARAMETERS ------>placeholder----> (Function parameters are the names listed in the function definition.)
+    // ARGUMENTS (Function arguments are the real values passed to (and received by) the function)
+    
+    function multipleNumbers(num1 , num2){
+    console.log(num1*num2);
+    }
+    multipleNumbers(9,89);
+
+    function addNum(a,b){
+        console.log(a+b)
+    }
+    addNum(789,45);
+
+    function sum(num1,num2,num3,num4){
+        console.log(num1+num2+num3+num4);
+    }
+    console.log("sum of numbers is")
+    sum(47,55,92,84);
+sum(20,0,7,5);
+
+// greeting function 
+function greetingfun(userName){
+    console.log(`welcome ${userName}`)
+}
+greetingfun("Alex");
+greetingfun("Nadia");
+
+// array 
+function courses(enrollCourses){
+    console.log(enrollCourses)
+}
+console.log("Enroll courses are")
+  courses(["IT","SE","AI","GIS"]);  
+
+  function productList(sellproducts){
+    console.log(sellproducts)
+  }
+  productList(["shoes","dresses","bags"]);
+
+// objects
+// function userData(fName,lName,age,country){
+//     console.log(fName,lName,age,country)
+    // create an obj 
+//     let firstName= "fName" ;
+//     let lastName="tin";
+//     let Age="age";
+//     let country= "country";
+
+//     const newUser = {
+//        [firstName]:"Alex",
+//     [lastName]:"tin",
+//     [age]:"20",
+//     [country]:"pakistan"
+//     }
+// }
+
+
+// console.log("wecome to our website" + newUser.firstName);
+    
+//    userData("Alex","tin","20","pakistan");
+// userData("Anila","khan","23","pakistan");
+// userData("komal","Amjad","24","india");
+ 
+// _______________
+
+
+
+function sumNumbers(c,d){
+    if(typeof c!="number" || typeof d!="number"){
+        console.log("please Enter a number")
+}else{
+    console.log(c+d)
+}
 }
 
-registrationNO=4902;
-if(registrationNO===4902){
-    loginLms();
+sumNumbers(8,12);
+// _________________
+//   DEFAULT PARAMETERS-----> function parameters that have a predefined value.
+// If the caller does not provide an argument for these parameters, the function uses the default value
+// NaN (not a number)
+function totalNumber(a,b,c,d){
+    // if(a===undefined){
+    //     a=0
+    // }
+    // if(b===undefined){
+    //     b=0
+    // }
+    // if(c===undefined){
+    //     c=0
+    // }
+    // if(d==undefined){
+    //     d=0
+    // }
+    console.log(a+b+c+d);
 }
-console.log("ghhjkkjkkiooijkhvvk");
+totalNumber(20,30,40);
 
 
 
+
+
+
+
+
+
+    
+    
+
+    
+   
+   
 
 
 
