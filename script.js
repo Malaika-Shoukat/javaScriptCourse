@@ -604,7 +604,7 @@
   
 //  const userProfileObjectValues= Object.values(userProfile);
 //  console.log(userProfileObjectValues);
-
+// ______________________
 // COMPUTED PROPERTIES
 // let personName= "userName";
 // let profileCreatedDate="createdAt";
@@ -697,11 +697,11 @@
 // }
 // _______________________________
 // function definition  
-function subNumbers(){
-    console.log(3-4)
-}
+// function subNumbers(){
+//     console.log(3-4)
+// }
 // envoke
-subNumbers();
+// subNumbers();
 
 // dynamicWebsits <changes> / staticWebsites <do not change>
     
@@ -709,41 +709,41 @@ subNumbers();
     // PARAMETERS ------>placeholder----> (Function parameters are the names listed in the function definition.)
     // ARGUMENTS (Function arguments are the real values passed to (and received by) the function)
     
-    function multipleNumbers(num1 , num2){
-    console.log(num1*num2);
-    }
-    multipleNumbers(9,89);
+//     function multipleNumbers(num1 , num2){
+//     console.log(num1*num2);
+//     }
+//     multipleNumbers(9,89);
 
-    function addNum(a,b){
-        console.log(a+b)
-    }
-    addNum(789,45);
+//     function addNum(a,b){
+//         console.log(a+b)
+//     }
+//     addNum(789,45);
 
-    function sum(num1,num2,num3,num4){
-        console.log(num1+num2+num3+num4);
-    }
-    console.log("sum of numbers is")
-    sum(47,55,92,84);
-sum(20,0,7,5);
+//     function sum(num1,num2,num3,num4){
+//         console.log(num1+num2+num3+num4);
+//     }
+//     console.log("sum of numbers is")
+//     sum(47,55,92,84);
+// sum(20,0,7,5);
 
 // greeting function 
-function greetingfun(userName){
-    console.log(`welcome ${userName}`)
-}
-greetingfun("Alex");
-greetingfun("Nadia");
+// function greetingfun(userName){
+//     console.log(`welcome ${userName}`)
+// }
+// greetingfun("Alex");
+// greetingfun("Nadia");
 
-// array 
-function courses(enrollCourses){
-    console.log(enrollCourses)
-}
-console.log("Enroll courses are")
-  courses(["IT","SE","AI","GIS"]);  
+// // array 
+// function courses(enrollCourses){
+//     console.log(enrollCourses)
+// }
+// console.log("Enroll courses are")
+//   courses(["IT","SE","AI","GIS"]);  
 
-  function productList(sellproducts){
-    console.log(sellproducts)
-  }
-  productList(["shoes","dresses","bags"]);
+//   function productList(sellproducts){
+//     console.log(sellproducts)
+//   }
+//   productList(["shoes","dresses","bags"]);
 
 // objects
 // function userData(fName,lName,age,country){
@@ -773,20 +773,20 @@ console.log("Enroll courses are")
 
 
 
-function sumNumbers(c,d){
-    if(typeof c!="number" || typeof d!="number"){
-        console.log("please Enter a number")
-}else{
-    console.log(c+d)
-}
-}
+// function sumNumbers(c,d){
+//     if(typeof c!="number" || typeof d!="number"){
+//         console.log("please Enter a number")
+// }else{
+//     console.log(c+d)
+// }
+// }
 
-sumNumbers(8,12);
+// sumNumbers(8,12);
 // _________________
 //   DEFAULT PARAMETERS-----> function parameters that have a predefined value.
 // If the caller does not provide an argument for these parameters, the function uses the default value
 // NaN (not a number)
-function totalNumber(a,b,c,d){
+// function totalNumber(a,b,c,d){
     // if(a===undefined){
     //     a=0
     // }
@@ -799,9 +799,61 @@ function totalNumber(a,b,c,d){
     // if(d==undefined){
     //     d=0
     // }
-    console.log(a+b+c+d);
+    // console.log(a+b+c+d);
+// }
+// totalNumber(20,30,40);
+// _______________________
+// Rest (...): Gathers values into an array (used in function parameters).
+// Spread (...): Spreads values from an array into individual elements (used in array/object manipulation).
+
+// REST PARAMETERS / rest operator----->
+// allow a function to accept an indefinite number of arguments as an array. They are represented by three dots (...) before the parameter name. 
+function marks(...b){
+   let arrayMarks= console.log(b)
+    return(arrayMarks);
 }
-totalNumber(20,30,40);
+marks(12,13,20,50,40,64);
+function productotalPrice(a,b,c,d,e,f,...prices){
+    let total=0;
+    for(let price of prices){
+        total= total+price
+    }
+    console.log(total);
+    console.log(a,b,c,d,e,f);
+}
+productotalPrice("iphone","tv","watch","iron","laptop","mouse",18000,50000,4000,90000,1000);
+
+function playerScores(player1,player2,player3,...scores){
+    totalScores=0;
+    for(let score of scores){
+        totalScores= totalScores+score;
+    }
+    console.log("players:",player1,player2,player3);
+    console.log("scores",scores);
+    console.log("total score :",totalScores);
+
+}
+playerScores("Alex","Jone","Jaky",12,10,20);
+
+// function
+//function declaration
+// parameters 
+//argumants 
+// default parameters 
+//rest parameters 
+//call/ invoke 
+// create an object using function
+//use loops inside functions
+// return keyword
+//keywords --->  speacial words that have specific meaning
+// return statement is used to exit a function and send a value back to the caller. 
+
+function userData(userName){
+    console.log(userName);
+    return "thanks"
+}
+userData("malaika");
+
 
 
 
