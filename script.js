@@ -852,7 +852,253 @@ function userData(userName){
     console.log(userName);
     return "thanks"
 }
-userData("malaika");
+let res= userData();
+console.log(res,"malaika for login")
+// ___________________
+// HIGHER ORDER FUNCTION -------> a function that takes a function as an argument 
+// cb :A callback function---> is a function that is passed as an argument to another 
+// function and is executed later, usually after some operation is completed.
+  function anyDataType(a){
+    console.log(a)
+    return a
+  }
+  anyDataType(18674);
+  anyDataType("this is a string");
+  anyDataType({student:"saliha", studentId:2804, course:"Ecomerece", Adress:{country:"pakistan", city:"gilgit-Baltistan", street:"main street45"}
+  });
+  anyDataType([true,58,"canada",undefined,[32]]);
+
+function add(a, b,c){
+  let result=a+b;
+     c(result);
+}
+add (2,8,function(val) {
+    console.log(val);
+})
+// anonymous function ---> a function that does not have a name and usually used when we don't need to reues the function elsewhere
+// Fetching User Data and Logging It :
+function fetchUserData(userId, callBack){
+    let userData = {id:userId, name:"Alex"};
+    callBack(userData);
+}
+fetchUserData(1, function(data){
+    console.log(`User ID: ${data.id}, Name: ${data.name}`)
+});
+
+// check result of student 
+function totalMarks(studentName,studentObtainMarks,callback){
+    let result= studentObtainMarks>=500 ? "passed":"fail";
+    callback(result);
+}
+totalMarks("urooj",628, function(marks){
+    console.log(marks);
+})
+
+// processing payments 
+function processingPayment(amount, callback){
+    let transactiobStatus = amount >0 ? "payment sucessful" : "payment failed" ;
+    callback(transactiobStatus);
+}
+processingPayment(500, function(status){
+    console.log(status);
+})
+
+// sending email 
+function sendingEmail(Email,message,callback){
+    let status = console.log(Email,message);
+    callback(status);
+}
+sendingEmail("uroojshoukat74@gmail.com:","wecome to our website! this is the link to take more benefits and get aware upto date regarding our  recent courses",function (response){
+    console.log(response);
+})
+// _____________________
+// foreach method --->higher order function or method
+// to creare a loop we use for each 
+// arr.foreach(callbackFunction)
+// array.foreach(value, index, array itself){
+    // console.log(value,index,array)}
+    let arr1 =[4,7,8];
+    arr1.forEach(function printVal(val){
+        console.log(val);
+    })
+
+// val is value at each index 
+// callBack function(value,index,array itself )
+const arr=[50,30,28];
+for(let items of arr){
+    console.log(items)
+}
+arr.forEach(function(value,index,array){
+    console.log("value",value,"index",index,"array",array)
+})
+
+const listofStudents=["sliha","sara","Nosheeba","Anila"];
+listofStudents.forEach(function(value,index){
+    console.log(value.toUpperCase(),index);
+})
+// _________________
+// CALLBACK FUNCTIONS 
+function outerFunction(cb){
+    console.log("outer function call");
+    cb(1,22);
+}
+
+function innerFunction(a,b){
+console.log("hello function call");
+console.log(a+b);
+}
+
+outerFunction(innerFunction);
+//  another way for calback functions
+function outerFunction(cb){
+    console.log("its outer function")
+    cb(1,22)
+}
+outerFunction(function innerFunction(a,b){
+    console.log(" its inner function");
+    console.log(a+b);
+})
+// ___________________
+// RETURN FUNCTION 
+function mul(n,m) {
+    return(n*m);
+       
+}
+const multipleNumbers= mul(2,3);
+console.log(multipleNumbers +30);
+
+
+function student(a){
+    return a;
+}
+const studentName= student("mifta");
+console.log(studentName.concat("  latif").toUpperCase()) 
+console.log(typeof(studentName))
+// _____________________
+const studentsOfMIAS=[{
+    fullName:"sara",
+    email:"sara@gmail.com",
+    passward:"sara2855",
+    department:"Software engineering",
+    course:"Ecommerce",
+    city:"GB",
+    registrationNo:"bsse4012"
+},
+{
+    fullName:"saliha",
+    email:"saliha@gmail.com",
+    passward:"saliha2855",
+    department:"Software engineering",
+    course:"Graphics",
+    city:"punjab",
+    registrationNo:"bscs4002"
+},
+{
+    fullName:"komal",
+    email:"komal@gmail.com",
+    passward:"komal2855",
+    department:"Software engineering",
+    course:"web_development",
+    city:"karachi",
+    registrationNo:"bsse4013"
+},
+{
+    fullName:"Ahmed",
+    email:"Ahmed@gmail.com",
+    passward:"Ahmed2855",
+    department:"Software engineering",
+    course:"AI",
+    city:"gb",
+    registrationNo:"bsse4014"
+}
+]
+studentsOfMIAS.forEach(function(student,index){
+    console.log(student,index);
+})
+// console.log(studentsOfMIAS.fullName); undefine
+// ________________
+// MAP METHOD 
+// creates a new array with the results of some operation. The vale its callback returns are used to form new array 
+// arr.map(caalbackfnx(valu,index,array))
+// let newArr=arr.map(val)=>{
+//     return val*2;
+// }
+let studentNames= studentsOfMIAS.map((val)=>{
+    return val.fullName.toUpperCase(); 
+}
+)
+console.log(studentNames)
+
+let number=[1,2,3,4,5];
+ const  total= number.map((val)=>{
+    return val*2;
+ });
+ console.log(total);
+// ___________________
+//filter METHOD
+// creates a new array of elements that give true for a condition /filter 
+// e.g(all even numbers)
+
+let numArr=[1,2,3,4,5,6,7,8];
+let evenNum= numArr.filter((val)=>{
+    return val % 2 ===0;
+});
+console.log("array of even numbers  is:",evenNum);
+
+let oddNum= numArr.filter((val)=>{
+    return val % 2 !=0;
+});
+console.log("array of odd nubers is : ",oddNum);
+// ___________________
+// Reduce METHOD 
+// performs some operations and reduces the array to a single value. it returns that signgle value.
+ const array1=[1,2,3,4];
+//  const initialVale = 0;
+//  const sumWithInitial = array1.reduce((accumulator/previouValue,currentValue)=>{
+//     return pre+ curr;
+
+//  }); 
+const output= array1.reduce((res,current)=>{
+    return res+current;
+});
+console.log(output);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
